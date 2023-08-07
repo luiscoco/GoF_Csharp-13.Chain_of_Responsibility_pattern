@@ -12,5 +12,26 @@ When a request is made, it starts at the first handler in the chain. If the curr
 it passes the request to the next handler in the chain.
 This process continues until a handler processes the request or until the chain ends.
 
+Now, let's see an example in C#:
 
+Suppose we have a simple bank transaction system, and we want to implement the Chain of Responsibility pattern to handle different types of transactions.
+
+Output:
+
+```
+Transaction logged: Amount: 500, Account Balance: 1000
+Transaction passed fraud detection. Proceeding...
+Sufficient balance. Transaction successful!
+Transaction logged: Amount: 2000, Account Balance: 1500
+Transaction passed fraud detection. Proceeding...
+Insufficient balance. Checking with the next handler...
+Transaction logged: Amount: 300, Account Balance: 200
+Insufficient balance. Checking with the next handler...
+Transaction failed. Insufficient balance.
+Transaction logged: Amount: 5000, Account Balance: 4000
+Transaction passed fraud detection. Proceeding...
+Sufficient balance. Transaction successful!
+```
+
+In this example, we set up a chain of responsibility with three handlers. Each handler tries to handle the transaction based on its specific logic. If a handler cannot handle the transaction, it passes the request to the next handler in the chain. The chain ends when a handler successfully handles the transaction or when no more handlers are available.
 
