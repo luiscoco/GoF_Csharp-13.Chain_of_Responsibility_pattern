@@ -1,4 +1,4 @@
-# GoF_Csharp_13.Chain-_of-_Responsibility_pattern
+# GoF_Csharp_13.Chain_of_Responsibility_pattern
 
 The Chain of Responsibility pattern is a behavioral design pattern that allows multiple objects to handle a request in a chain-like manner without 
 the client explicitly specifying the receiver. Each handler in the chain has the option to handle the request or pass it to the next handler in the chain 
